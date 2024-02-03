@@ -23,6 +23,63 @@ var mapProp= {
 map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 newMarker(new google.maps.LatLng(47.609749, -122.341431), "pluh");
 
+class markerImageOverlay extends google.maps.OverlayView {
+    bounds;
+    image;
+    div;
+    constructor(bounds, image) {
+      super();
+      this.bounds = bounds;
+      this.image = image;
+    }
+    
+    onAdd() {
+      this.div = document.createElement("div");
+      this.div.style.borderStyle = "none";
+      this.div.style.borderWidth = "0px";
+      this.div.style.position = "absolute";
+
+      // Create the img element and attach it to the div.
+      const img = document.createElement("img");
+
+      img.src = this.image;
+      img.style.width = "100%";
+      img.style.height = "100%";
+      img.style.position = "absolute";
+      this.div.appendChild(img);
+
+      
+      const panes = this.getPanes();
+
+      panes.overlayLayer.appendChild(this.div);
+    }
+    draw() {
+     
+      const overlayProjection = this.getProjection();
+    
+      const sw = overlayProjection.fromLatLngToDivPixel(
+        this.bounds.getSouthWest(),
+      );
+      const ne = overlayProjection.fromLatLngToDivPixel(
+        this.bounds.getNorthEast(),
+      );
+
+      // Resize the image's div to fit the indicated dimensions.
+      if (this.div) {
+        this.div.style.left = sw.x + "px";
+        this.div.style.top = ne.y + "px";
+        this.div.style.width = ne.x - sw.x + "px";
+        this.div.style.height = sw.y - ne.y + "px";
+      }
+    }
+    
+    onRemove() {
+      if (this.div) {
+        this.div.parentNode.removeChild(this.div);
+        delete this.div;
+      }
+    }
+  }
 
 }
 initialize();
