@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #eec0c8;
+    font-family: Arial, sans-serif;
+  }
+  
+  .postcard {
+    width: 600px;
+    height: 500px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .stamp {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 24px;
+  }
+  
+  .message {
+    text-align: center;
+  }
+  
+  .signature {
+    text-align: right;
+    font-style: italic;
+    color: #888;
+  }
+  
