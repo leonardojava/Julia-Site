@@ -21,11 +21,10 @@
                 position: pos,
                 map: map,
                 //here you can add icon: path to icon image but make sure image is small enough to function as icon, i could not :(
-               
             });
             //little bit so thatmarkers open up html page
-            google.maps.event.addListener(marker, 'click', function() {
-                window.open(pageName + '.html', '_blank');
+            google.maps.event.addListener(marker, 'click', function() { 
+                window.open('pages\\' + pageName + '.html', '_blank');
             });
         }
 
@@ -35,18 +34,19 @@
                 center: new google.maps.LatLng(48.75112, 238.74011),
                 zoom: 7
             };
-
+            //this is where I create the map and all the markers to be cleaner though with the markers
+            //you might want to store all the marker props in an array and use a for loop to create the markers ?
             map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-
+            
             newMarker(new google.maps.LatLng(47.609749, -122.341431), 'pike');
             newMarker(new google.maps.LatLng(49.279304, -123.114177), 'library');
             newMarker(new google.maps.LatLng(48.7703049, -122.4495217), 'mario');
             newMarker(new google.maps.LatLng(48.0948381, -122.1871464), 'outlet');
             newMarker(new google.maps.LatLng(48.7523452, -122.4797893), 'cucina');
             newMarker(new google.maps.LatLng(49.210149, -123.116382), 'wonka');
-            //newMarker(new google.maps.LatLng(49.279304, -123.114177), 'library');
-            //newMarker(new google.maps.LatLng(49.279304, -123.114177), 'library');
-            //newMarker(new google.maps.LatLng(49.279304, -123.114177), 'library');
+            newMarker(new google.maps.LatLng(47.9657984,-122.2279168), 'wingstop');
+            newMarker(new google.maps.LatLng(49.182313, -123.133859), 'aberdeen');
+            newMarker(new google.maps.LatLng(49.17554473876953, -123.13250732421875), 'lansdowne');
             //newMarker(new google.maps.LatLng(49.279304, -123.114177), 'library');
             
             
