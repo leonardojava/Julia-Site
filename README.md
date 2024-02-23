@@ -7,8 +7,7 @@ to create markers at special/date locations which open up new HTML pages with co
 This project is relativly simply it's pretty minimal javascript with the Google Maps API everything else is HTML and CSS.
 
 ## Contribuiting:
-uh I don't expect to really update this particular repository however by the time you're reading this hopefully
-I created another version of this where users can create and share their own map + postcards
+uh right now I don't want any contributions made to this repository for obvious reasons but in the future I do plan on making a public web app that allows people to use this template to create their own maps and markers so that'd be cool :3
 ## License: 
 
 [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/) 

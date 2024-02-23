@@ -2,15 +2,31 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: left;
     height: 100vh;
     margin: 0;
     background-color: #eec0c8;
     font-family: Arial, sans-serif;
   }
+  h1 {
+    font-size: 35px;
+    text-align: left;
+  }
+  p {
+    font-family: 'Times New Roman', serif;
+    text-align: left;
+  }
+  img {
+    float: right;
+    width: 300px;
+    height: 300px;
+    border: 10px solid transparent;
+    border-image: repeating-linear-gradient(-45deg, #73d2de, #73d2de 5px, white 5px, white 10px) 10;
+  }
   
   .postcard {
-    width: 800px;
-    height: 700px;
+    width: 900px;
+    height: 500px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -19,17 +35,8 @@ body {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-  }
-  
-  .stamp {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    font-size: 24px;
-  }
-  
-  .message {
-    text-align: center;
+    border: 10px solid transparent;
+    border-image: repeating-linear-gradient(-45deg, #a4133c, #a4133c 10px, white 10px, white 20px) 10;
   }
   
   .signature {
