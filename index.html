@@ -4,12 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>You have incoming postcards ❤️❤️❤️</title>
-<link rel="stylesheet" href="mapStyle.css">
+<link rel="stylesheet" type = "text/css" href="mapStyle.css">
 <link rel="icon" type="image/x-icon" href="resources\mail.gif">
 </head>
 <body>
     <div class="container">
-        <h1>Postcards for you!❤️</h1>
+        <h1>❤️Postcards for you!❤️</h1>
+        <h4>✉️Click on each marker to view and feel free to drag the yellow guy to see each location✉️</h4>
         <div id="googleMap"></div>
     </div>
 
@@ -37,14 +38,14 @@
             //this is where I create the map and all the markers to be cleaner though with the markers
             //you might want to store all the marker props in an array and use a for loop to create the markers ?
             map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-            
+            newMarker(new google.maps.LatLng(49.165740, -123.138610), 'RC');
             newMarker(new google.maps.LatLng(47.609749, -122.341431), 'pike');
             newMarker(new google.maps.LatLng(49.279304, -123.114177), 'library');
             newMarker(new google.maps.LatLng(48.7703049, -122.4495217), 'mario');
             newMarker(new google.maps.LatLng(48.0948381, -122.1871464), 'outlet');
             newMarker(new google.maps.LatLng(48.7523452, -122.4797893), 'cucina');
-            newMarker(new google.maps.LatLng(49.210149, -123.116382), 'wonka');
-            newMarker(new google.maps.LatLng(47.9657984,-122.2279168), 'wingstop');
+            //newMarker(new google.maps.LatLng(49.210149, -123.116382), 'wonka');
+            newMarker(new google.maps.LatLng(47.920879,-122.228605), 'wingstop');
             newMarker(new google.maps.LatLng(49.182313, -123.133859), 'aberdeen');
             newMarker(new google.maps.LatLng(49.17554473876953, -123.13250732421875), 'lansdowne');
             //newMarker(new google.maps.LatLng(49.279304, -123.114177), 'library');
