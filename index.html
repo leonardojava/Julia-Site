@@ -18,7 +18,7 @@
         var map;
         //creating new marker method so I dont fill up space with allat, takes position and page it linked to
         function newMarker(pos, pageName) {
-            var marker = new google.maps.Marker({
+            var marker = new google.maps.marker.AdvancedMarkerElement({
                 position: pos,
                 map: map,
                 //here you can add icon: path to icon image but make sure image is small enough to function as icon, i could not :(
@@ -29,11 +29,12 @@
             });
         }
 
-        function initialize() {
+        async function initialize() {
             //I center map around Seattle cause thats where most the locations are but be free to zoom in wherever
             var mapProp = {
                 center: new google.maps.LatLng(48.75112, 238.74011),
-                zoom: 7
+                zoom: 7,
+                mapId: "DEMO_MAP_ID"
             };
             //this is where I create the map and all the markers to be cleaner though with the markers
             //you might want to store all the marker props in an array and use a for loop to create the markers ?
@@ -57,6 +58,6 @@
         initialize();
     </script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLLWCcjoAaSeDscglxumRkb--MAJ_jJzQ&callback=initialize"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLLWCcjoAaSeDscglxumRkb--MAJ_jJzQ&callback=initialize&loading=async&libraries=marker"></script>
 </body>
 </html>
