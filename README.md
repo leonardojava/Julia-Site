@@ -1,4 +1,4 @@
-# Google Map Postcard(For Julia)
+# Google Map Postcard
 We broke up lol, but I'm still proud of the technical aspects of this site despite it being simple html CSS so it'll stay up I guess.
 This project wa a gift. It uses Google Map API
 to create markers at special/date locations which open up new HTML pages with cool content !
